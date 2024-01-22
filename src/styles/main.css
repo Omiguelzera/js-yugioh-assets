@@ -140,3 +140,25 @@ button, a, img:hover, button:hover, a:hover{
 .card:hover{
     transform: scale(1.2);
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .container__left, .container__right {
+        width: 100%;
+    }
+
+    .card-box__container {
+        flex-direction: column;
+    }
+
+    .versus-top, .versus-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-infield {
+        margin-bottom: 10px;
+    }
+}   
