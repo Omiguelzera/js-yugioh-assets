@@ -82,8 +82,14 @@ async function createCardImage(IdCard, fieldSide){
     return cardImage;
 }
 
+async function drawSelectCard(index){
+    state.cardSprites.avatar.src = cardData[index].img;
+    state.cardSprites.name.innerText = cardData[index].name;
+    state.cardSprites.type.innerText = "Attbute : " + cardData[index].type
+}
+
 async function drawCards(cardNumbers, fieldSide){
-    for(let i= 0; 1<cardNumbers; i++){
+    for(let i= 0; i<cardNumbers; i++){
         const randomIdCard = await getRandomCardId();
         const cardImage = await createCardImage(randomIdCard, fieldSide);
 
